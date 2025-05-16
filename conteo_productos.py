@@ -4,10 +4,20 @@ poder y una ves echo esto debera poder relizar un conteo fisico de sus productos
 una ves termine el conteo debera desplegarse el total de piezas contadas y valor monetario
 de su inventario'''
 
-productos={}
+productos={'leche':[123,11,4]}
+buscar=[]
+flag = True
 
-
-nombre=str(input('Escribe el nombre de producto: '))
-codigo=int(input('Codigo de producto: '))
-costo=float(input('Costo por unidad: $'))
-cantidad=int(input('Cantidad encontrada: '))
+while flag == True:
+    producto=str(input('Nombre o codigo de producto encontrado: '))
+    buscar.append(producto)
+    if producto or codigo in productos:
+        cantidad=int(input('Cantidad encontrada: '))
+        print(productos)
+    elif producto != productos:
+        nombre=str(input('Escribe el nombre de producto: '))
+        codigo=int(input('Codigo de producto: '))
+        costo=float(input('Costo por unidad: $'))
+        existencia=int(input('Cantidad a buscar: '))
+        productos[nombre,codigo]=[costo,existencia]
+        print(productos)
